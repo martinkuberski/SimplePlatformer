@@ -3,9 +3,11 @@ var right = keyboard_check(ord("D"));
 var jump = keyboard_check_pressed(vk_space);
 var dash = keyboard_check(vk_shift);
 
-//horizontal movement
-xSpd = (right - left) * walkSpd;
-if dash xSpd *= dashMult;
+//horizontal movement - acceleration
+xSpdTarget = (right - left) * walkSpd;
+if dash xSpdTarget *= dashMult;
+if (xSpd < xSpdTarget) xSpd += accel;
+if (xSpd > xSpdTarget) xSpd -= accel;
 //gravity
 ySpd += grv;
 //jumping
