@@ -10,6 +10,10 @@ if dash xSpd *= dashMult;
 ySpd += grv;
 //jumping
 if (canJump-- > 0) && (jump) ySpd -= jumpSpd;
+if (canJump <= 0) && (canDoubleJump) && (ySpd > 0) && (jump) {
+	ySpd = -jumpSpd;
+	canDoubleJump = 0;	
+}
 //collision
 if (place_meeting(x + xSpd, y, oWall)) {
 	if (abs(xSpd) > 0.5) {
@@ -20,6 +24,7 @@ if (place_meeting(x + xSpd, y, oWall)) {
 }
 if (place_meeting(x, y + ySpd, oWall)) {
 	if (ySpd > 0) canJump = 5;
+	if (doubleJump) canDoubleJump = 1;
 	if (abs(ySpd) > 0.5) {
 		ySpd *= 0.75;
 		if (!place_meeting(x, y + ySpd, oWall)) y += ySpd;

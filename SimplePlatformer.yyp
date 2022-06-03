@@ -1,5 +1,7 @@
 {
   "resources": [
+    {"id":{"name":"sPowerup","path":"sprites/sPowerup/sPowerup.yy",},"order":2,},
+    {"id":{"name":"oPowerup","path":"objects/oPowerup/oPowerup.yy",},"order":2,},
     {"id":{"name":"sWall","path":"sprites/sWall/sWall.yy",},"order":1,},
     {"id":{"name":"sPlayer","path":"sprites/sPlayer/sPlayer.yy",},"order":0,},
     {"id":{"name":"oWall","path":"objects/oWall/oWall.yy",},"order":0,},
