@@ -5,7 +5,9 @@ var dash = keyboard_check(vk_shift);
 
 //horizontal movement - acceleration
 xSpdTarget = (right - left) * walkSpd;
-if dash xSpdTarget *= dashMult;
+if dash {
+	xSpdTarget *= dashMult;
+} 
 if (xSpd < xSpdTarget) xSpd += accel;
 if (xSpd > xSpdTarget) xSpd -= accel;
 //gravity
@@ -33,7 +35,18 @@ if (place_meeting(x, y + ySpd, oWall)) {
 	}
 	ySpd = 0;
 }
-//set coordinates
+//set coordinates and animation
+if xSpd == 0 sprite_index = sPlayerIdle;
+else if xSpd > 0 {
+	sprite_index = sPlayerRun;
+	image_xscale = 1;
+}
+else if xSpd < 0 {
+	sprite_index = sPlayerRun;
+	image_xscale = -1;
+}
+if(canJump <= 0) sprite_index = sPlayerJump;
+
 x += xSpd;
 y += ySpd;
 
