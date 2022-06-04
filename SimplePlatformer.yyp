@@ -1,5 +1,6 @@
 {
   "resources": [
+    {"id":{"name":"oCamera","path":"objects/oCamera/oCamera.yy",},"order":5,},
     {"id":{"name":"sPowerup","path":"sprites/sPowerup/sPowerup.yy",},"order":2,},
     {"id":{"name":"sIce","path":"sprites/sIce/sIce.yy",},"order":8,},
     {"id":{"name":"sTileset","path":"sprites/sTileset/sTileset.yy",},"order":6,},
