@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "sWall",
-    "path": "sprites/sWall/sWall.yy",
+    "name": "sIce",
+    "path": "sprites/sIce/sIce.yy",
   },
   "solid": false,
   "visible": false,
@@ -29,7 +29,7 @@
     "path": "folders/Objects.yy",
   },
   "resourceVersion": "1.0",
-  "name": "oWall",
+  "name": "oIce",
   "tags": [],
   "resourceType": "GMObject",
 }

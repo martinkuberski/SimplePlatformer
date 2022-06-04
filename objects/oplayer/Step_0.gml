@@ -1,15 +1,18 @@
+//keyboard
 var left = keyboard_check(ord("A"));
 var right = keyboard_check(ord("D"));
 var jump = keyboard_check_pressed(vk_space);
 var dash = keyboard_check(vk_shift);
 
+
 //horizontal movement - acceleration
 xSpdTarget = (right - left) * walkSpd;
 if dash {
 	xSpdTarget *= dashMult;
+	if(xSpd!=0) instance_create_layer(x,bbox_bottom,"Instances",oDust);
 } 
-if (xSpd < xSpdTarget) xSpd += accel;
-if (xSpd > xSpdTarget) xSpd -= accel;
+if (xSpd < xSpdTarget) xSpd += currentAccel;
+if (xSpd > xSpdTarget) xSpd -= currentAccel;
 //gravity
 ySpd += grv;
 //jumping
@@ -18,6 +21,9 @@ if (canJump <= 0) && (canDoubleJump) && (ySpd > 0) && (jump) {
 	ySpd = -jumpSpd;
 	canDoubleJump = 0;	
 }
+
+//ice
+if (place_meeting(x, y + ySpd, oIce)) currentAccel = iceAccel else currentAccel = accel;
 //collision
 if (place_meeting(x + xSpd, y, oWall)) {
 	if (abs(xSpd) > 0.5) {

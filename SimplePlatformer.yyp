@@ -1,16 +1,20 @@
 {
   "resources": [
     {"id":{"name":"sPowerup","path":"sprites/sPowerup/sPowerup.yy",},"order":2,},
+    {"id":{"name":"sIce","path":"sprites/sIce/sIce.yy",},"order":8,},
     {"id":{"name":"sTileset","path":"sprites/sTileset/sTileset.yy",},"order":6,},
     {"id":{"name":"sPlayerIdle","path":"sprites/sPlayerIdle/sPlayerIdle.yy",},"order":3,},
     {"id":{"name":"oPowerup","path":"objects/oPowerup/oPowerup.yy",},"order":2,},
     {"id":{"name":"sPlayerRun","path":"sprites/sPlayerRun/sPlayerRun.yy",},"order":4,},
+    {"id":{"name":"sDust","path":"sprites/sDust/sDust.yy",},"order":7,},
     {"id":{"name":"sWall","path":"sprites/sWall/sWall.yy",},"order":1,},
     {"id":{"name":"sPlayerJump","path":"sprites/sPlayerJump/sPlayerJump.yy",},"order":5,},
     {"id":{"name":"sPlayer","path":"sprites/sPlayer/sPlayer.yy",},"order":0,},
     {"id":{"name":"oWall","path":"objects/oWall/oWall.yy",},"order":0,},
     {"id":{"name":"oPlayer","path":"objects/oPlayer/oPlayer.yy",},"order":1,},
     {"id":{"name":"TileSet1","path":"tilesets/TileSet1/TileSet1.yy",},"order":0,},
+    {"id":{"name":"oIce","path":"objects/oIce/oIce.yy",},"order":4,},
+    {"id":{"name":"oDust","path":"objects/oDust/oDust.yy",},"order":3,},
     {"id":{"name":"Room1","path":"rooms/Room1/Room1.yy",},"order":0,},
   ],
   "Options": [
