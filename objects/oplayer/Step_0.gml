@@ -19,6 +19,9 @@ ySpd += grv;
 if (canJump-- > 0) && (jump) ySpd -= jumpSpd;
 if (canJump <= 0) && (canDoubleJump) && (ySpd > 0) && (jump) {
 	ySpd = -jumpSpd;
+	//for single-use powerup:
+	doubleJump = 0;
+	//redundant, for multiple-use powerup (comment out the above line):
 	canDoubleJump = 0;	
 }
 

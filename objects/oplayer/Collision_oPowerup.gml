@@ -1,2 +1,4 @@
-doubleJump = 1;
-instance_destroy(other);
+if (other.inactiveTimer == 0) {
+	other.inactiveTimer = powerupTimer;
+	doubleJump = 1;
+}
