@@ -15,6 +15,7 @@
     {"id":{"name":"oPlayer","path":"objects/oPlayer/oPlayer.yy",},"order":1,},
     {"id":{"name":"TileSet1","path":"tilesets/TileSet1/TileSet1.yy",},"order":0,},
     {"id":{"name":"oIce","path":"objects/oIce/oIce.yy",},"order":4,},
+    {"id":{"name":"shaderPowerup","path":"shaders/shaderPowerup/shaderPowerup.yy",},"order":0,},
     {"id":{"name":"oDust","path":"objects/oDust/oDust.yy",},"order":3,},
     {"id":{"name":"Room1","path":"rooms/Room1/Room1.yy",},"order":0,},
   ],
