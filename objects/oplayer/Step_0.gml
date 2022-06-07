@@ -4,6 +4,58 @@ var right = keyboard_check(ord("D"));
 var jump = keyboard_check_pressed(vk_space);
 var dash = keyboard_check(vk_shift);
 
+//improve for more controls modability? 
+if (left || right || jump || dash) {
+	controller = 0;
+}
+
+//controller
+if (abs(gamepad_axis_value(0, gp_axislh)) > 0.2) {
+	left = abs(min(gamepad_axis_value(0, gp_axislh), 0));
+	right = max(gamepad_axis_value(0, gp_axislh), 0);
+	controller = 1;
+}
+
+if (gamepad_button_check_pressed(0, gp_face1)) {
+	jump = 1;
+	controller = 1;
+}
+
+if (gamepad_button_check(0, gp_face3)) {
+	dash = 1;
+	controller = 1;
+}
+
+if (gamepad_button_check(0, gp_padl)) {
+	left = 1;
+	controller = 1;
+}
+
+if (gamepad_button_check(0, gp_padr)) {
+	right = 1;
+	controller = 1;
+}
+
+/*var bigK = keyboard_check_pressed(ord("F"));
+if(bigK) {
+	switch (big) {
+		case 0:
+			big = 1;
+			image_xscale *= 3;
+			image_yscale *= 3;
+		break;
+		case 1:
+			big = 0;
+			image_xscale /= 3;
+			image_yscale /= 3;
+		break;
+		default:
+			big = 0;
+			image_xscale = 1;
+			image_yscale = 1;
+	}
+} 
+*/
 
 //horizontal movement - acceleration
 xSpdTarget = (right - left) * walkSpd;
