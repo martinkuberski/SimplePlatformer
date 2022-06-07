@@ -1,5 +1,7 @@
 //macros
 #macro deadzone 0.2
+//state
+state = states.normal;
 //movement constants
 grv = 0.4;
 accel = 1;
