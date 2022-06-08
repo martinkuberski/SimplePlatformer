@@ -1,4 +1,8 @@
 var zoom = keyboard_check_pressed(ord("Z"));
+if (gamepad_button_check_pressed(0, gp_face4)) {
+	zoom = 1;
+	oPlayer.controller = 1;
+}
 
 if (zoom) {
 	if(xSize == 640 && ySize == 360) {
