@@ -1,8 +1,25 @@
+//ineffective: how to reduce the number of checks? Change at pickup?
+switch (weapon) {
+	case 0:
+		currentSprite = spriteIdle;
+		break;
+	case 1:
+		currentSprite = spriteCane;
+		break;
+	default:
+		currentSprite = spriteIdle;
+		break;
+}
+
+
+//state machine
 switch (state) {
 	case states.normal:
 		stateNormal();
+		break;
 	case states.attack:
 		stateAttack();
+		break;
 }
 
 

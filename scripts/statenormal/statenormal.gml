@@ -25,17 +25,18 @@ function stateNormal(){
 
 	//ice
 	if (place_meeting(x, y + ySpd, oIce)) currentAccel = iceAccel else currentAccel = accel;
+	
 	//set animation
-	if xSpd == 0 sprite_index = sPlayerIdle;
+	if xSpd == 0 sprite_index = currentSprite[0];
 	else if xSpd > 0 {
-		sprite_index = sPlayerRun;
+		sprite_index = currentSprite[1];
 		image_xscale = 1;
 	}
 	else if xSpd < 0 {
-		sprite_index = sPlayerRun;
+		sprite_index = currentSprite[1];
 		image_xscale = -1;
 	}
-	if(canJump <= 0) sprite_index = sPlayerJump;
+	if(canJump <= 0) sprite_index = currentSprite[2];
 	
 	collision();
 	
