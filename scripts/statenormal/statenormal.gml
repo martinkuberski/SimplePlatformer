@@ -43,5 +43,10 @@ function stateNormal(){
 	//update coordinates
 	x += xSpd;
 	y += ySpd;
-
+	
+	//check for attacks
+	if(weapon == 1) {
+		if (slash) state = states.attackS;
+		else if (thrust) state = states.attackT;
+	}
 }

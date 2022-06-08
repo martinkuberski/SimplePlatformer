@@ -4,6 +4,8 @@ left = keyboard_check(ord("A"));
 right = keyboard_check(ord("D"));
 jump = keyboard_check_pressed(vk_space);
 dash = keyboard_check(vk_shift);
+slash = keyboard_check_pressed(ord("Q"));
+thrust = keyboard_check_pressed(ord("E"));
 
 //improve for more controls modability? 
 if (left || right || jump || dash) {
@@ -34,6 +36,16 @@ if (gamepad_button_check(0, gp_padl)) {
 
 if (gamepad_button_check(0, gp_padr)) {
 	right = 1;
+	controller = 1;
+}
+
+if (gamepad_button_check_pressed(0, gp_shoulderl)) {
+	slash = 1;
+	controller = 1;
+}
+
+if (gamepad_button_check_pressed(0, gp_shoulderr)) {
+	thrust = 1;
 	controller = 1;
 }
 

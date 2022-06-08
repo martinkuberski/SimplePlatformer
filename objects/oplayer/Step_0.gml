@@ -17,8 +17,14 @@ switch (state) {
 	case states.normal:
 		stateNormal();
 		break;
-	case states.attack:
-		stateAttack();
+	case states.attackS:
+		stateAttack(attackType.slash);
+		break;
+	case states.attackT:
+		stateAttack(attackType.thrust);
+		break;
+	default:
+		stateNormal();
 		break;
 }
 

@@ -19,6 +19,7 @@ currentAccel = 1;
 //other variables
 weapon = 0;
 currentSprite = spriteIdle;
+hitByAttack = ds_list_create();
 //flags
 canJump = 0;
 canDoubleJump = 0;
