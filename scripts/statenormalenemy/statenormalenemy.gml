@@ -2,11 +2,12 @@ function stateNormalEnemy(){
 	
 	//'thinking' - better way to represent it using maths?
 	timer++;
-	if(timer == room_speed * 3 || timer == room_speed * 6) xSpdTarget = choose(-1,0,1) * walkSpd; //every 3 sec
+	if(timer == room_speed * 3 || timer == room_speed * 6) {right = choose(0,1); left = choose(0,1);} //every 3 sec
 	if(timer == room_speed * 5) jump = choose(0,1); //every 5 sec decide whether to jump
 	if(timer == room_speed * 6) {dash = choose(0,1); timer = 0} //every 6 sec decide whether to jump, also reset the timer
 	
 	//horizontal accel
+	xSpdTarget = (right - left) * walkSpd;
 	if dash {
 		xSpdTarget *= dashMult;
 		if(xSpd!=0) instance_create_layer(x,bbox_bottom,"Instances",oDust);
@@ -16,10 +17,7 @@ function stateNormalEnemy(){
 	//gravity
 	ySpd += global.grv;
 	//jumping
-	if (canJump-- > 0) && (jump) ySpd -= jumpSpd;
-	if (canJump <= 0) && (ySpd > 0) && (jump) {
-		ySpd = -jumpSpd;
-	}
+	if (canJump-- > 0) && (jump) { ySpd -= jumpSpd; jump = 0;}
 
 	//ice
 	if (place_meeting(x, y + ySpd, oIce)) currentAccel = iceAccel else currentAccel = accel;

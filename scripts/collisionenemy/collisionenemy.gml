@@ -4,8 +4,11 @@ function collisionEnemy(){
 
 	//collision
 	if (place_meeting(x + xSpd, y, oWall)) {
-		xSpd *= -1;
-		xSpdTarget *= -1;
+		xSpd = 0;
+		if(right == 1) right = 0;
+		else if(right == 0) right = 1;
+		if(left == 1) left = 0;
+		else if(left == 0) left = 1;
 	}
 	if (place_meeting(x, y + ySpd, oWall)) {
 		if (ySpd > 0) canJump = 5;

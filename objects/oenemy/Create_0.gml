@@ -20,5 +20,7 @@ hp = 10;
 weapon = 0;
 currentSprite = spriteIdle;
 timer = 0;
+left = 0;
+right = 0;
 //flags
 canJump = 0;
