@@ -1,10 +1,12 @@
-// Script assets have changed for v2.3.0 see
-// https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
-function stateNormal(){
-	input();
+function stateNormalEnemy(){
+	
+	//'thinking' - better way to represent it using maths?
+	timer++;
+	if(timer == room_speed * 3 || timer == room_speed * 6) xSpdTarget = choose(-1,0,1) * walkSpd; //every 3 sec
+	if(timer == room_speed * 5) jump = choose(0,1); //every 5 sec decide whether to jump
+	if(timer == room_speed * 6) {dash = choose(0,1); timer = 0} //every 6 sec decide whether to jump, also reset the timer
 	
 	//horizontal accel
-	xSpdTarget = (right - left) * walkSpd;
 	if dash {
 		xSpdTarget *= dashMult;
 		if(xSpd!=0) instance_create_layer(x,bbox_bottom,"Instances",oDust);
@@ -15,12 +17,8 @@ function stateNormal(){
 	ySpd += global.grv;
 	//jumping
 	if (canJump-- > 0) && (jump) ySpd -= jumpSpd;
-	if (canJump <= 0) && (canDoubleJump) && (ySpd > 0) && (jump) {
+	if (canJump <= 0) && (ySpd > 0) && (jump) {
 		ySpd = -jumpSpd;
-		//for single-use powerup:
-		doubleJump = 0;
-		//redundant, for multiple-use powerup (comment out the above line):
-		canDoubleJump = 0;	
 	}
 
 	//ice
@@ -38,15 +36,9 @@ function stateNormal(){
 	}
 	if(canJump <= 0) sprite_index = currentSprite[2];
 	
-	collision();
+	collisionEnemy();
 	
 	//update coordinates
 	x += xSpd;
 	y += ySpd;
-	
-	//check for attacks
-	if(weapon == 1) {
-		if (slash) state = states.attackS;
-		else if (thrust) state = states.attackT;
-	}
 }

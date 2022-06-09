@@ -3,7 +3,7 @@
 //state
 state = states.normal;
 //movement constants
-grv = 0.4;
+global.grv = 0.4;
 accel = 1;
 iceAccel = 0.25;
 walkSpd = 3;
@@ -17,6 +17,7 @@ xSpd = 0;
 ySpd = 0;
 currentAccel = 1;
 //other variables
+hp = 50;
 weapon = 0;
 currentSprite = spriteIdle;
 hitByAttack = ds_list_create();
