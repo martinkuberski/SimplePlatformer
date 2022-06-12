@@ -10,8 +10,8 @@ walkSpd = 3;
 dashMult = 2;
 jumpSpd = 6;
 //other constants
-spriteIdle = [sPlayerIdle, sPlayerRun, sPlayerJump];
-spriteCane = [sPlayerIdleC, sPlayerRunC, sPlayerJumpC];
+spriteIdle = [sPlayerIdle, sPlayerRun, sPlayerJump, sPlayerDead];
+spriteCane = [sPlayerIdleC, sPlayerRunC, sPlayerJumpC, sPlayerDead];
 //movement variables
 xSpd = 0;
 ySpd = 0;
@@ -21,6 +21,7 @@ hp = 50;
 weapon = 0;
 currentSprite = spriteIdle;
 hitByAttack = ds_list_create();
+hitflash = 0;
 //flags
 canJump = 0;
 canDoubleJump = 0;

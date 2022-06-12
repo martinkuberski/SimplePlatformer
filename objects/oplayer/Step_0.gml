@@ -1,4 +1,4 @@
-//ineffective: how to reduce the number of checks? Change at pickup?
+//weapon sprite (ineffective: how to reduce the number of checks? Change at pickup?)
 switch (weapon) {
 	case 0:
 		currentSprite = spriteIdle;
@@ -28,7 +28,7 @@ switch (state) {
 		break;
 }
 
-
+if(hitflash > 0) hitflash--;
 /*var bigK = keyboard_check_pressed(ord("F"));
 if(bigK) {
 	switch (big) {

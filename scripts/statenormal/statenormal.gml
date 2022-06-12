@@ -49,4 +49,8 @@ function stateNormal(){
 		if (slash) state = states.attackS;
 		else if (thrust) state = states.attackT;
 	}
+	//check hp
+	if(hp <= 0) {
+		state = states.dead;
+	}
 }

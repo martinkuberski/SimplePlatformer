@@ -2,6 +2,7 @@ enum states {
 	normal,
 	attackS,
 	attackT,
+	dead
 }
 
 enum attackType {

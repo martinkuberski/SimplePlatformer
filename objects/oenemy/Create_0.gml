@@ -7,7 +7,7 @@ walkSpd = 3;
 jumpSpd = 6;
 dashMult = 2;
 //other constants
-spriteIdle = [sEnemyIdle, sEnemyRun, sEnemyJump];
+spriteIdle = [sEnemyIdle, sEnemyRun, sEnemyJump, sEnemyDead];
 //movement variables
 xSpd = 0;
 ySpd = 0;
@@ -22,5 +22,6 @@ currentSprite = spriteIdle;
 timer = 0;
 left = 0;
 right = 0;
+hitflash = 0;
 //flags
 canJump = 0;
