@@ -6,11 +6,14 @@ if(gamepad_button_check_pressed(0, gp_select)) {
 
 //weapon sprite (ineffective: how to reduce the number of checks? Change at pickup?)
 switch (weapon) {
-	case 0:
+	case weapons.none:
 		currentSprite = spriteIdle;
 		break;
-	case 1:
+	case weapons.cane:
 		currentSprite = spriteCane;
+		break;
+	case weapons.gun:
+		currentSprite = spriteGun;
 		break;
 	default:
 		currentSprite = spriteIdle;

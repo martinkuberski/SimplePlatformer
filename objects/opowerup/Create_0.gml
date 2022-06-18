@@ -1,2 +1,2 @@
-#macro powerupTimer 60*2;
+#macro powerupTimer room_speed*2;
 inactiveTimer = 0;

@@ -45,10 +45,23 @@ function stateNormal(){
 	y += ySpd;
 	
 	//check for attacks
-	if(weapon == 1) {
-		if (slash) state = states.attackS;
-		else if (thrust) state = states.attackT;
+	switch (weapon) {
+		case weapons.cane:
+			if (slash) state = states.attackS;
+			else if (thrust) state = states.attackT;
+			break;
+		case weapons.gun:
+			var bullet;
+			if (slash || thrust) {
+				if(image_xscale > 0) bullet = instance_create_layer(bbox_right,y-4,"Instances", oBullet);
+				if(image_xscale < 0) bullet = instance_create_layer(bbox_left,y-4,"Instances", oBullet);
+				bullet.bulletSpeed *= sign(image_xscale);
+			}
+			break;
+		default:
+			break;
 	}
+	
 	//check hp
 	if(hp <= 0) {
 		state = states.dead;

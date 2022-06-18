@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "sCane",
-    "path": "sprites/sCane/sCane.yy",
+    "name": "sGun",
+    "path": "sprites/sGun/sGun.yy",
   },
   "solid": false,
   "visible": true,
@@ -32,7 +32,7 @@
     "path": "folders/Objects.yy",
   },
   "resourceVersion": "1.0",
-  "name": "oCane",
+  "name": "oGun",
   "tags": [],
   "resourceType": "GMObject",
 }

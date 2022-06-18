@@ -12,13 +12,14 @@ jumpSpd = 6;
 //other constants
 spriteIdle = [sPlayerIdle, sPlayerRun, sPlayerJump, sPlayerDead];
 spriteCane = [sPlayerIdleC, sPlayerRunC, sPlayerJumpC, sPlayerDead];
+spriteGun = [sPlayerIdleG, sPlayerRunG, sPlayerJumpG, sPlayerDead];
 //movement variables
 xSpd = 0;
 ySpd = 0;
 currentAccel = 1;
 //other variables
 hp = 50;
-weapon = 0;
+weapon = weapons.none;
 currentSprite = spriteIdle;
 hitByAttack = ds_list_create();
 hitflash = 0;

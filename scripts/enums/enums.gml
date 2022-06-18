@@ -5,6 +5,11 @@ enum states {
 	dead
 }
 
+enum weapons {
+	none,
+	cane,
+	gun
+}
 enum attackType {
 	slash,
 	thrust,
