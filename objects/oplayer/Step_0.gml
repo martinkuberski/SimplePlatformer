@@ -1,3 +1,9 @@
+var reset = keyboard_check_pressed(ord("R"));
+if(gamepad_button_check_pressed(0, gp_select)) {
+	reset = 1;
+	controller = 1;
+}
+
 //weapon sprite (ineffective: how to reduce the number of checks? Change at pickup?)
 switch (weapon) {
 	case 0:
@@ -50,7 +56,6 @@ if(bigK) {
 } 
 */
 
-
-
+if reset game_restart();
 
 
