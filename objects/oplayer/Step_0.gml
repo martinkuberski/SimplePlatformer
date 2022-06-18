@@ -1,3 +1,5 @@
+if(keyboard_check_pressed(ord("R"))) game_restart();
+
 //ineffective: how to reduce the number of checks? Change at pickup?
 switch (weapon) {
 	case 0:
