@@ -29,6 +29,7 @@
     {"id":{"name":"oCane","path":"objects/oCane/oCane.yy",},"order":6,},
     {"id":{"name":"sPlayerIdleG","path":"sprites/sPlayerIdleG/sPlayerIdleG.yy",},"order":24,},
     {"id":{"name":"sPlayerAttackSlashCHB","path":"sprites/sPlayerAttackSlashCHB/sPlayerAttackSlashCHB.yy",},"order":15,},
+    {"id":{"name":"sImpact","path":"sprites/sImpact/sImpact.yy",},"order":27,},
     {"id":{"name":"sPlayerRunC","path":"sprites/sPlayerRunC/sPlayerRunC.yy",},"order":11,},
     {"id":{"name":"hitDMG","path":"scripts/hitDMG/hitDMG.yy",},"order":6,},
     {"id":{"name":"collision","path":"scripts/collision/collision.yy",},"order":3,},
@@ -91,7 +92,7 @@
   ],
   "IncludedFiles": [],
   "MetaData": {
-    "IDEVersion": "2022.5.1.16",
+    "IDEVersion": "2022.5.1.14",
   },
   "resourceVersion": "1.5",
   "name": "SimplePlatformer",

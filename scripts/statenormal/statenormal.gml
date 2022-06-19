@@ -51,8 +51,8 @@ function stateNormal(){
 			else if (thrust) state = states.attackT;
 			break;
 		case weapons.gun:
-			var bullet;
-			if (slash || thrust) {
+			var bullet
+			if (slash || thrust) && (instance_number(oBullet) < 2) {
 				if(image_xscale > 0) bullet = instance_create_layer(bbox_right,y-4,"Instances", oBullet);
 				if(image_xscale < 0) bullet = instance_create_layer(bbox_left,y-4,"Instances", oBullet);
 				bullet.bulletSpeed *= sign(image_xscale);
