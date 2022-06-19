@@ -11,6 +11,7 @@ function stateNormal(){
 	} 
 	if (xSpd < xSpdTarget) xSpd += currentAccel;
 	if (xSpd > xSpdTarget) xSpd -= currentAccel;
+	if (abs(xSpdTarget - xSpd) < currentAccel) xSpd = xSpdTarget;
 	//gravity
 	ySpd += global.grv;
 	//jumping
