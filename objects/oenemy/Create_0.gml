@@ -8,6 +8,7 @@ jumpSpd = 6;
 dashMult = 2;
 //other constants
 spriteIdle = [sEnemyIdle, sEnemyRun, sEnemyJump, sEnemyDead];
+spriteGun = [sEnemyIdleG, sEnemyRunG, sEnemyJumpG, sEnemyDead];
 //movement variables
 xSpd = 0;
 ySpd = 0;
@@ -23,5 +24,6 @@ timer = 0;
 left = 0;
 right = 0;
 hitflash = 0;
+weapon = weapons.none;
 //flags
 canJump = 0;

@@ -32,6 +32,13 @@ switch (state) {
 	case states.attackT:
 		stateAttack(attackType.thrust);
 		break;
+	case states.dead:
+		sprite_index = currentSprite[3];
+		if(animation_end()) image_speed = 0;
+		ySpd += global.grv;
+		collision();
+		y += ySpd;
+		break;
 	default:
 		stateNormal();
 		break;

@@ -1,3 +1,15 @@
+switch (weapon) {
+	case weapons.none:
+		currentSprite = spriteIdle;
+		break;
+	case weapons.gun:
+		currentSprite = spriteGun;
+		break;
+	default:
+		currentSprite = spriteIdle;
+		break;
+}
+
 switch (state) {
 	case states.normal:
 		stateNormalEnemy();

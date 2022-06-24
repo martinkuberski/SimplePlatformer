@@ -56,6 +56,7 @@ function stateNormal(){
 			if (slash || thrust) && (instance_number(oBullet) < 2) {
 				if(image_xscale > 0) bullet = instance_create_layer(bbox_right,y-4,"Instances", oBullet);
 				if(image_xscale < 0) bullet = instance_create_layer(bbox_left,y-4,"Instances", oBullet);
+				bullet.shooter = id;
 				bullet.bulletSpeed *= sign(image_xscale);
 			}
 			break;
