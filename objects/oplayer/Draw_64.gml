@@ -3,8 +3,15 @@
 draw_text(64,64,"xSpd: " + string(xSpd) + "\n" + "xSpdTarget: " + string(xSpdTarget) + "\n" + "currentAccel: " + string(currentAccel))*/
 
 //needs changing to healthbar
-draw_set_color(c_red);
-draw_text(64, 64, "HP: " + string(hp));
+//draw_set_color(c_red);
+//draw_text(64, 64, "HP: " + string(hp));
+
+//healthbar
+for(i = 0; i < ceil(hp/10); i++) {
+	draw_sprite(guiHealthbarSquare, 0, 0.5*display_get_gui_width() - 0.5*168 + 4 + i*32, display_get_gui_height() - 32);
+}
+draw_sprite(guiHealthbarFrame, 0, 0.5*display_get_gui_width() - 0.5*168, display_get_gui_height() - 32);
+
 
 //needs fixing
 if (state == states.dead) {

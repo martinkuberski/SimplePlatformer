@@ -6,7 +6,7 @@ function stateNormalEnemy(){
 	if(timer == room_speed * 5) jump = choose(0,1);  //every 5 sec decide whether to jump
 	if(timer == room_speed * 6) {dash = choose(0,1); timer = 0} //every 6 sec decide whether to jump, also reset the timer
 	//debug
-	//if(keyboard_check(ord("F"))) {left = 0; right = 0; dash = 0; jump = 0; shoot = 100;}
+	if(keyboard_check(ord("F"))) {left = 0; right = 0; dash = 0; jump = 0; shoot = 100;}
 	//horizontal accel
 	xSpdTarget = (right - left) * walkSpd;
 	if dash {

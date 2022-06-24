@@ -8,14 +8,14 @@
   "collisionTolerance": 0,
   "swfPrecision": 2.525,
   "bbox_left": 0,
-  "bbox_right": 0,
+  "bbox_right": 31,
   "bbox_top": 0,
-  "bbox_bottom": 0,
+  "bbox_bottom": 31,
   "HTile": false,
   "VTile": false,
   "For3D": false,
-  "width": 64,
-  "height": 64,
+  "width": 32,
+  "height": 32,
   "textureGroupId": {
     "name": "Default",
     "path": "texturegroups/Default",
@@ -24,12 +24,12 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"91db5618-6574-4f2a-ab9c-4fc10004bb3f","path":"sprites/Sprite38/Sprite38.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"91db5618-6574-4f2a-ab9c-4fc10004bb3f","path":"sprites/Sprite38/Sprite38.yy",},"LayerId":{"name":"d14e2d6e-fd1f-4009-8691-afbfd4af638e","path":"sprites/Sprite38/Sprite38.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"Sprite38","path":"sprites/Sprite38/Sprite38.yy",},"resourceVersion":"1.0","name":"91db5618-6574-4f2a-ab9c-4fc10004bb3f","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"1be877ae-de07-40d0-9f78-5808f8ccfd8d","path":"sprites/guiHealthbarSquare/guiHealthbarSquare.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"1be877ae-de07-40d0-9f78-5808f8ccfd8d","path":"sprites/guiHealthbarSquare/guiHealthbarSquare.yy",},"LayerId":{"name":"79731c71-ae93-4452-9376-8cfcca390bb3","path":"sprites/guiHealthbarSquare/guiHealthbarSquare.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"guiHealthbarSquare","path":"sprites/guiHealthbarSquare/guiHealthbarSquare.yy",},"resourceVersion":"1.0","name":"1be877ae-de07-40d0-9f78-5808f8ccfd8d","tags":[],"resourceType":"GMSpriteFrame",},
   ],
   "sequence": {
-    "spriteId": {"name":"Sprite38","path":"sprites/Sprite38/Sprite38.yy",},
+    "spriteId": {"name":"guiHealthbarSquare","path":"sprites/guiHealthbarSquare/guiHealthbarSquare.yy",},
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 30.0,
@@ -41,7 +41,7 @@
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
       {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"a9f37afe-1bab-44c1-94e0-41c2d6efe075","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"91db5618-6574-4f2a-ab9c-4fc10004bb3f","path":"sprites/Sprite38/Sprite38.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"d48ad95a-6ecb-4dab-b139-9afc73f98dfa","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"1be877ae-de07-40d0-9f78-5808f8ccfd8d","path":"sprites/guiHealthbarSquare/guiHealthbarSquare.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
           ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
     ],
     "visibleRange": null,
@@ -58,14 +58,14 @@
     "yorigin": 0,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"Sprite38","path":"sprites/Sprite38/Sprite38.yy",},
+    "parent": {"name":"guiHealthbarSquare","path":"sprites/guiHealthbarSquare/guiHealthbarSquare.yy",},
     "resourceVersion": "1.4",
-    "name": "Sprite38",
+    "name": "guiHealthbarSquare",
     "tags": [],
     "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"d14e2d6e-fd1f-4009-8691-afbfd4af638e","tags":[],"resourceType":"GMImageLayer",},
+    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"79731c71-ae93-4452-9376-8cfcca390bb3","tags":[],"resourceType":"GMImageLayer",},
   ],
   "nineSlice": null,
   "parent": {
@@ -73,7 +73,7 @@
     "path": "folders/Sprites.yy",
   },
   "resourceVersion": "1.0",
-  "name": "Sprite38",
+  "name": "guiHealthbarSquare",
   "tags": [],
   "resourceType": "GMSprite",
 }
