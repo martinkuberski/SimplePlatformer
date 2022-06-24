@@ -25,3 +25,7 @@ x += camSpd * (xTarget - x);
 y += camSpd * (yTarget - y);
 
 camera_set_view_pos(cam, x - camera_get_view_width(cam)/2, y - camera_get_view_height(cam)/2);
+
+//Parallax
+if(layer_exists("Mountains")) layer_x("Mountains", x * 0.5); 
+if(layer_exists("Trees")) layer_x("Trees", x * 0.25);
