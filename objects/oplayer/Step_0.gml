@@ -39,6 +39,9 @@ switch (state) {
 		collision();
 		y += ySpd;
 		break;
+	case states.menu:
+		sprite_index = currentSprite[animations.run];
+		break;
 	default:
 		stateNormal();
 		break;

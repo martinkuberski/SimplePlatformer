@@ -6,6 +6,7 @@ draw_text(64,64,"xSpd: " + string(xSpd) + "\n" + "xSpdTarget: " + string(xSpdTar
 //draw_set_color(c_red);
 //draw_text(64, 64, "HP: " + string(hp));
 
+if(state != states.menu) {
 //healthbar
 for(i = 0; i < ceil(hp/10); i++) {
 	draw_sprite(guiHealthbarSquare, 0, 0.5*display_get_gui_width() - 0.5*168 + 4 + i*32, display_get_gui_height() - 32);
@@ -16,4 +17,5 @@ draw_sprite(guiHealthbarFrame, 0, 0.5*display_get_gui_width() - 0.5*168, display
 //needs fixing
 if (state == states.dead) {
 	draw_text(display_get_gui_width()/2, display_get_gui_height()/2, "You are dead! \n Press R or Select to restart!");
+}
 }

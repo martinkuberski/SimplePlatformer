@@ -2,7 +2,8 @@ enum states {
 	normal,
 	attackS,
 	attackT,
-	dead
+	dead,
+	menu
 }
 
 enum weapons {
@@ -12,5 +13,12 @@ enum weapons {
 }
 enum attackType {
 	slash,
-	thrust,
+	thrust
+}
+
+enum animations {
+	idle,
+	run,
+	jump,
+	dead
 }
