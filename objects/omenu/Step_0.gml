@@ -1,34 +1,44 @@
-if(menuControl) {
-input();
-//menuCooldown--;
-//if(menuCooldown <= 0) {
-	if(up) {
-		if(menuSelect = menuOptions.start) menuSelect = menuOptions.quit;
-		else menuSelect--;
-		//menuCooldown = 2 * room_speed;
-	}
-	if(down) {
-		if(menuSelect = menuOptions.quit) menuSelect = menuOptions.start;
-		else menuSelect++;
-		//menuCooldown = 2 * room_speed;
-	}
-//}
-}
+switch (menuSubscreen){
+	
+#region main 
+	case menuSubscreens.main:
+		menuControl(menuOptions.start, menuOptions.quit)
+		switch menuSelected {
+			case menuOptions.start:
+				room_goto_next();
+				break;
+			case menuOptions.options:
+				menuSubscreen = menuSubscreens.options;
+				menuSelected = pointer_null;
+				menuSelect = 0;
+				menuControl = true;
+				break;
+			case menuOptions.quit:
+				game_end();
+				break;
+			default:
+				menuSelected = pointer_null;
+				menuControl = true;
+				break;
+		}
+		break;
+#endregion main
 
-if(slash || thrust) {
-	menuSelected = menuSelect;
-	menuControl = false;
-}
-
-switch menuSelected {
-	case menuOptions.start:
-		room_goto_next();
+#region options
+	case menuSubscreens.options:
+		menuControl(0, 9);
+		switch menuSelected {
+			case 9:
+				menuSubscreen = menuSubscreens.main;
+				menuSelected = pointer_null;
+				menuSelect = 0;
+				menuControl = true;
+				break;
+			default:
+				menuSelected = pointer_null;
+				menuControl = true;
+				break;
+		}
 		break;
-	case menuOptions.quit:
-		game_end();
-		break;
-	default:
-		menuSelected = pointer_null;
-		menuControl = true;
-		break;
+#endregion options
 }

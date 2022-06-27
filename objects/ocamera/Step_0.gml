@@ -6,7 +6,7 @@ camera_set_view_pos(cam, 64, 168);
 
 else {
 	
-var zoom = keyboard_check_pressed(ord("Z"));
+input(); //is there a more efficient way than calling input?
 if (gamepad_button_check_pressed(0, gp_face4)) {
 		zoom = 1;
 		oPlayer.controller = 1;

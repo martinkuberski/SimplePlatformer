@@ -1,16 +1,17 @@
 function input(){
 //keyboard
-left = keyboard_check(ord("A")) || keyboard_check(vk_left);
-right = keyboard_check(ord("D")) || keyboard_check(vk_right);
-down = keyboard_check_pressed(ord("S")) || keyboard_check_pressed(vk_down);
-up = keyboard_check_pressed(ord("W")) || keyboard_check_pressed(vk_up);
-jump = keyboard_check_pressed(vk_space);
-dash = keyboard_check(vk_shift);
-slash = keyboard_check_pressed(ord("Q"));
-thrust = keyboard_check_pressed(ord("E"));
+left = keyboard_check(global.kLeft[0]) || keyboard_check(global.kLeft[1]);
+right = keyboard_check(global.kRight[0]) || keyboard_check(global.kRight[1]);
+down = keyboard_check_pressed(global.kDown[0]) || keyboard_check_pressed(global.kDown[1]);
+up = keyboard_check_pressed(global.kUp[0]) || keyboard_check_pressed(global.kUp[1]);
+jump = keyboard_check_pressed(global.kJump[0]) || keyboard_check_pressed(global.kJump[1]);
+dash = keyboard_check(global.kDash[0]) || keyboard_check(global.kDash[1]);
+slash = keyboard_check_pressed(global.kSlash[0]) || keyboard_check_pressed(global.kSlash[1]);
+thrust = keyboard_check_pressed(global.kThrust[0]) || keyboard_check_pressed(global.kThrust[1]);
+zoom = keyboard_check_pressed(global.kZoom[0]) || keyboard_check_pressed(global.kZoom[1]);
 
-//improve for more controls modability? 
-if (left || right || jump || dash) {
+//check if works
+if (keyboard_check_pressed(vk_anykey)) {
 	controller = 0;
 }
 
