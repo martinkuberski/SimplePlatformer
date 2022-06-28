@@ -1,0 +1,1 @@
+target = room_next(room);

@@ -32,6 +32,10 @@ if (instance_exists(follow)) {
 
 x += camSpd * (xTarget - x);
 y += camSpd * (yTarget - y);
+
+x = clamp(x, camera_get_view_width(cam)/2, room_width - camera_get_view_width(cam)/2);
+y = clamp(y, camera_get_view_height(cam)/2, room_height - camera_get_view_height(cam)/2);
+
 camera_set_view_size(cam, camera_get_view_width(cam) + zoomSpd * (xSize - camera_get_view_width(cam)), camera_get_view_height(cam) + zoomSpd * (ySize - camera_get_view_height(cam)));
 camera_set_view_pos(cam, x - camera_get_view_width(cam)/2, y - camera_get_view_height(cam)/2);
 	

@@ -9,6 +9,7 @@ dashMult = 2;
 //other constants
 spriteIdle = [sEnemyIdle, sEnemyRun, sEnemyJump, sEnemyDead];
 spriteGun = [sEnemyIdleG, sEnemyRunG, sEnemyJumpG, sEnemyDead];
+itemDrop = pointer_null;
 //movement variables
 xSpd = 0;
 ySpd = 0;

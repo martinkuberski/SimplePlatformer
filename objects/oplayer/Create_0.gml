@@ -23,6 +23,7 @@ weapon = weapons.none;
 currentSprite = spriteIdle;
 hitByAttack = ds_list_create();
 hitflash = 0;
+key = 0;
 //flags
 canJump = 0;
 canDoubleJump = 0;

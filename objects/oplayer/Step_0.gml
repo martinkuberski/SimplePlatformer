@@ -1,4 +1,6 @@
 var reset = keyboard_check_pressed(ord("R"));
+var mainMenu = keyboard_check_pressed(vk_escape);
+
 if(gamepad_button_check_pressed(0, gp_select)) {
 	reset = 1;
 	controller = 1;
@@ -69,6 +71,5 @@ if(bigK) {
 } 
 */
 
-if reset game_restart();
-
-
+if reset room_restart();
+if mainMenu room_goto(rMenu);

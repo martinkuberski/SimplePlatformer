@@ -58,6 +58,7 @@ function stateNormalEnemy(){
 	
 	//check hp
 	if(hp <= 0) {
+		if(itemDrop != pointer_null) instance_create_layer(x,bbox_top,"Instances", itemDrop);
 		state = states.dead;
 		timer = 15*room_speed;
 	}
