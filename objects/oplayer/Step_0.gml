@@ -1,10 +1,19 @@
-var reset = keyboard_check_pressed(ord("R"));
-var mainMenu = keyboard_check_pressed(vk_escape);
-
-if(gamepad_button_check_pressed(0, gp_select)) {
-	reset = 1;
-	controller = 1;
+if(room != rMenu) {
+	var reset = keyboard_check_pressed(vk_enter);
+	var mainMenu = keyboard_check_pressed(vk_escape);
+	if(gamepad_button_check_pressed(0, gp_select)) {
+		reset = 1;
+		controller = 1;
+	}
+	if(gamepad_button_check_pressed(0, gp_start)) {
+		mainMenu = 1;
+		controller = 1;
+	}
+	if reset room_restart();
+	if mainMenu room_goto(rMenu);
 }
+
+
 
 //weapon sprite (ineffective: how to reduce the number of checks? Change at pickup?)
 switch (weapon) {
@@ -70,6 +79,3 @@ if(bigK) {
 	}
 } 
 */
-
-if reset room_restart();
-if mainMenu room_goto(rMenu);

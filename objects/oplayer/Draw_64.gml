@@ -16,6 +16,6 @@ draw_sprite(guiHealthbarFrame, 0, 0.5*display_get_gui_width() - 0.5*168, display
 if(key) draw_sprite_ext(sKey, 0, 64, 64, 4, 4, 0, c_white, 1);
 //needs fixing
 if (state == states.dead) {
-	draw_text(display_get_gui_width()/2, display_get_gui_height()/2, "You are dead! \n Press R or Select to restart!");
+	draw_text(display_get_gui_width()/2, display_get_gui_height()/2, "You are dead! \n Press ENTER or Select to restart!");
 }
 }

@@ -7,6 +7,26 @@ switch (menuSubscreen){
 			case menuOptions.start:
 				room_goto_next();
 				break;
+			case menuOptions.cont:
+				ini_open(optionsfile);
+				switch (ini_read_real("save", "room", 1)) {
+					case 1:
+						ini_close();
+						room_goto(Room1);
+						break;
+					case 2:
+						ini_close();
+						room_goto(Room2);
+						break;
+					case 3:
+						ini_close();
+						room_goto(Room3);
+						break;
+					default:
+						ini_close();
+						room_goto(Room1);
+						break;
+				}
 			case menuOptions.select:
 				menuSubscreen = menuSubscreens.select;
 				menuSelected = pointer_null;

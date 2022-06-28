@@ -12,7 +12,6 @@ enum menuSubscreens {
 	options
 }
 
-#macro savefile "savefile.sav"
 #macro optionsfile "option.ini"
 
 guiX = display_get_gui_width();
