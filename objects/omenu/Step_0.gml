@@ -7,6 +7,12 @@ switch (menuSubscreen){
 			case menuOptions.start:
 				room_goto_next();
 				break;
+			case menuOptions.select:
+				menuSubscreen = menuSubscreens.select;
+				menuSelected = pointer_null;
+				menuSelect = 0;
+				menuControls = true;
+				break;
 			case menuOptions.options:
 				menuSubscreen = menuSubscreens.options;
 				menuSelected = pointer_null;
@@ -23,6 +29,33 @@ switch (menuSubscreen){
 		}
 		break;
 #endregion main
+
+#region select
+	case menuSubscreens.select:
+		menuControl(0, 3);
+		switch menuSelected {
+			case 0:
+				room_goto(Room1);
+				break;
+			case 1:
+				room_goto(Room2);
+				break;
+			case 2:
+				room_goto(Room3);
+				break;
+			case 3:
+				menuSubscreen = menuSubscreens.main;
+				menuSelected = pointer_null;
+				menuSelect = 0;
+				menuControls = true;
+				break;
+			default:
+				menuSelected = pointer_null;
+				menuControls = true;
+				break;
+		}
+		break;
+#endregion select
 
 #region options
 	case menuSubscreens.options:
