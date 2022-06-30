@@ -16,6 +16,22 @@ function stateNormal(){
 	ySpd += global.grv;
 	//jumping
 	if (canJump-- > 0) && (jump) ySpd -= jumpSpd;
+	//walljumping	
+	if (walljump) {
+		canWalljump++;
+	} else canWalljump = 0;
+
+	if (canWalljump >= 15) && (wallJumpPower) {
+		if (canWalljump <= 60) ySpd = 0;
+		else ySpd = global.grv*2.5;
+		if (jump) {
+			ySpd = -jumpSpd;
+			if (left) xSpd = jumpSpd*2;
+			if (right) xSpd = -jumpSpd*2;
+		}
+	}
+	
+	//double jumping
 	if (canJump <= 0) && (canDoubleJump) && (ySpd > 0) && (jump) {
 		ySpd = -jumpSpd;
 		//for single-use powerup:
@@ -40,6 +56,8 @@ function stateNormal(){
 	if(canJump <= 0) sprite_index = currentSprite[2];
 	
 	collision();
+	
+	if(canWalljump >= 15) && (wallJumpPower) sprite_index = sPlayerWallJump;
 	
 	//update coordinates
 	x += xSpd;

@@ -52,7 +52,7 @@ switch (menuSubscreen){
 
 #region select
 	case menuSubscreens.select:
-		menuControl(0, 3);
+		menuControl(0, 4);
 		switch menuSelected {
 			case 0:
 				room_goto(Room1);
@@ -64,6 +64,9 @@ switch (menuSubscreen){
 				room_goto(Room3);
 				break;
 			case 3:
+				room_goto(Room4);
+				break;
+			case 4:
 				menuSubscreen = menuSubscreens.main;
 				menuSelected = pointer_null;
 				menuSelect = 0;

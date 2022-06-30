@@ -16,3 +16,9 @@ if(hitflash) {
 	draw_self();
 	shader_reset();
 }	
+
+/*if(canWalljump) {
+	shader_set(shaderHitflash);
+	draw_self();
+	shader_reset();
+}*/

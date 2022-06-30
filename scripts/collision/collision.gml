@@ -8,7 +8,8 @@ function collision(){
 			if (!place_meeting(x + xSpd, y, oWall)) x += xSpd;
 		}
 		xSpd = 0;
-	}
+		if(id.object_index == oPlayer) walljump = 1;
+	} else if(id.object_index == oPlayer) walljump = 0;
 	if (place_meeting(x, y + ySpd, oWall)) {
 		if (ySpd > 0) canJump = 5;
 		if (doubleJump) canDoubleJump = 1;

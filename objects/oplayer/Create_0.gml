@@ -27,7 +27,10 @@ key = 0;
 //flags
 canJump = 0;
 canDoubleJump = 0;
+walljump = 0;
+canWalljump = 0;
 doubleJump = 0;
+wallJumpPower = 0;
 controller = 0;
 //big = 0;
 

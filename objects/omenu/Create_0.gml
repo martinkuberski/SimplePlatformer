@@ -28,7 +28,7 @@ menuSelected = pointer_null;
 menuControls = true;
 
 menuText = ["Start", "Continue", "Select level", "Controls", "Quit"];
-menuTextLevels = ["Level 1", "Level 2", "Level 3", "Go back to the main menu"];
+menuTextLevels = ["Level 1", "Level 2", "Level 3", "Level 4", "Go back to the main menu"];
 
 menuCooldown = 0;
 
